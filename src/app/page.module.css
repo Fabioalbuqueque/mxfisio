@@ -11,25 +11,73 @@
 
   display: flex;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   font-family: var(--font-geist-sans);
   background-color: var(--background);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: var(--foreground);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
 .main {
   display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
   flex-direction: column;
-  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background-color: var(--foreground);
   padding: 120px 60px;
+  background-color: var(--foreground);
+  gap: 40px;
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholderImage {
+  width: 300px;
+  height: 200px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 18px;
 }
 
 .intro {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -38,7 +86,7 @@
 }
 
 .intro h1 {
-  max-width: 320px;
+  max-width: 500px;
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
@@ -53,11 +101,6 @@
   line-height: 32px;
   text-wrap: balance;
   color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
 }
 
 .ctas {
@@ -106,9 +149,61 @@ a.secondary {
   }
 }
 
+.section {
+  padding: 60px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background-color: var(--foreground);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.service p {
+  color: var(--text-secondary);
+}
+
+.footer {
+  background-color: var(--text-primary);
+  color: var(--background);
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
 @media (max-width: 600px) {
-  .main {
+  .header {
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
     padding: 48px 24px;
+    flex-direction: column;
   }
 
   .intro {
@@ -119,6 +214,14 @@ a.secondary {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -1.92px;
+  }
+
+  .section {
+    padding: 40px 24px;
+  }
+
+  .services {
+    flex-direction: column;
   }
 }
 

@@ -1,66 +1,67 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <h1>Fisioterapia Profissional</h1>
+        </div>
+        <nav className={styles.nav}>
+          <Link href="#servicos">Serviços</Link>
+          <Link href="#sobre">Sobre</Link>
+          <Link href="#contato">Contato</Link>
+        </nav>
+      </header>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <section className={styles.hero}>
+          <div className={styles.intro}>
+            <h1>Bem-vindo à Fisioterapia Profissional</h1>
+            <p>Cuide da sua saúde com tratamentos personalizados e eficazes. Recupere sua mobilidade e qualidade de vida.</p>
+            <div className={styles.ctas}>
+              <Link href="#contato" className="primary">Agende uma Consulta</Link>
+              <Link href="#servicos" className="secondary">Saiba Mais</Link>
+            </div>
+          </div>
+          <div className={styles.heroImage}>
+            {/* Placeholder para imagem */}
+            <div className={styles.placeholderImage}>Imagem de Fisioterapia</div>
+          </div>
+        </section>
+        <section id="servicos" className={styles.section}>
+          <h2>Nossos Serviços</h2>
+          <div className={styles.services}>
+            <div className={styles.service}>
+              <h3>Fisioterapia Ortopédica</h3>
+              <p>Tratamento de lesões musculares, articulares e ósseas.</p>
+            </div>
+            <div className={styles.service}>
+              <h3>Fisioterapia Esportiva</h3>
+              <p>Preparação física e recuperação de atletas.</p>
+            </div>
+            <div className={styles.service}>
+              <h3>Fisioterapia Respiratória</h3>
+              <p>Tratamentos para melhorar a função respiratória.</p>
+            </div>
+          </div>
+        </section>
+        <section id="sobre" className={styles.section}>
+          <h2>Sobre Mim</h2>
+          <p>Sou uma fisioterapeuta experiente com mais de 10 anos de prática.
+             Meu compromisso é oferecer cuidados personalizados para ajudar você a alcançar seus objetivos de saúde.</p>
+        </section>
+        <section id="contato" className={styles.section}>
+          <h2>Entre em Contato</h2>
+          <p>Telefone: (11) 99999-9999</p>
+          <p>Email: contato@fisioterapia.com</p>
+          <p>Endereço: Rua Exemplo, 123 - São Paulo, SP</p>
+        </section>
       </main>
+      <footer className={styles.footer}>
+        <p>&copy; 2023 Fisioterapia Profissional. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
 }
