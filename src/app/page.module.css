@@ -64,7 +64,7 @@
 }
 
 .heroImage {
-  flex: 1 1 50%;
+  flex: 2 2 50%;
   min-width: 0; /* evita overflow em flex children */
   display: flex;
   justify-content: center;
@@ -103,7 +103,8 @@
 }
 
 .intro h1 {
-  max-width: 500px;
+  max-width: 600px;
+  
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 600;
   line-height: 1.15;
@@ -119,9 +120,9 @@
 }
 
 .ctas {
-  display: flex;
+  display: column;
   flex-direction: row;
-  width: 100%;
+  width: 120%;
   max-width: 440px;
   gap: 12px;
   font-size: 14px;
@@ -129,7 +130,7 @@
 }
 
 .ctas a {
-  display: flex;
+  
   justify-content: center;
   align-items: center;
   height: 40px;
