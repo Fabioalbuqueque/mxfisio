@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <h1>Fisioterapia Profissional</h1>
+          <h2>Medicina e Saúde</h2>
         </div>
         <nav className={styles.nav}>
           <Link href="#servicos">Serviços</Link>
@@ -18,7 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.hero}>
           <div className={styles.intro}>
-            <h1>Bem-vindo à Fisioterapia Profissional</h1>
+            <h1>Bem-vindo à Marcela Fisoterapelta </h1>
             <p>Cuide da sua saúde com tratamentos personalizados e eficazes. Recupere sua mobilidade e qualidade de vida.</p>
             <div className={styles.ctas}>
               <Link href="#contato" className="primary">Agende uma Consulta</Link>
@@ -26,8 +26,9 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.heroImage}>
-            {/* Placeholder para imagem */}
-            <div className={styles.placeholderImage}>Imagem de Fisioterapeuta</div>
+           
+            <div className={styles.placeholderImage}><Image src="/marcelaaa.png" alt="Imagem de Fisioterapia" width={600} height={400} /></div>
+         
           </div>
         </section>
         <section id="servicos" className={styles.section}>
@@ -54,13 +55,12 @@ export default function Home() {
         </section>
         <section id="contato" className={styles.section}>
           <h2>Entre em Contato</h2>
-          <p>Telefone: (11) 99999-9999</p>
-          <p>Email: contato@fisioterapia.com</p>
-          <p>Endereço: Rua Exemplo, 123 - São Paulo, SP</p>
+          <p>WhatsApp: (81) 99684-8464</p>
+          <p>Endereço: Rua Dona Ada Vieira, 112 - Poco, Recife PE</p>
         </section>
       </main>
       <footer className={styles.footer}>
-        <p>&copy; 2023 Fisioterapia Profissional. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Marcela Xavier . Todos os direitos reservados.</p>
       </footer>
     </div>
   );

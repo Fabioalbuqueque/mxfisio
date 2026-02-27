@@ -9,6 +9,9 @@
   --button-secondary-hover: #f2f2f2;
   --button-secondary-border: #ebebeb;
 
+  --container-max-width: 1200px;
+  --container-padding: clamp(16px, 4vw, 60px);
+
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -20,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: clamp(12px,2.5vw,20px) var(--container-padding);
   background-color: var(--foreground);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -30,9 +33,11 @@
   color: var(--text-primary);
 }
 
+
 .nav {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -44,36 +49,48 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0;
+  padding: 0 var(--container-padding);
 }
 
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 60px;
+  padding: clamp(32px,6vw,100px) var(--container-padding);
   background-color: var(--foreground);
-  gap: 40px;
+  gap: 24px;
 }
 
 .heroImage {
-  flex: 1;
+  flex: 1 1 50%;
+  min-width: 0; /* evita overflow em flex children */
   display: flex;
   justify-content: center;
   align-items: center;
+  color: transparent;
 }
 
 .placeholderImage {
-  width: 300px;
-  height: 200px;
-  background-color: #ddd;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 2;
+  color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
   font-size: 18px;
+}
+
+.heroImage img,
+.placeholderImage img {
+  width: 100%;
+  height: auto; /* mantém proporção real da imagem */
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  max-width: 100%;
 }
 
 .intro {
@@ -87,19 +104,17 @@
 
 .intro h1 {
   max-width: 500px;
-  font-size: 40px;
+  font-size: clamp(28px, 4vw, 40px);
   font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
   color: var(--text-primary);
 }
 
 .intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
+  max-width: 640px;
+  font-size: clamp(15px, 2.2vw, 18px);
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
@@ -108,8 +123,9 @@
   flex-direction: row;
   width: 100%;
   max-width: 440px;
-  gap: 16px;
+  gap: 12px;
   font-size: 14px;
+  flex-wrap: wrap;
 }
 
 .ctas a {
@@ -150,7 +166,7 @@ a.secondary {
 }
 
 .section {
-  padding: 60px;
+  padding: clamp(28px,4vw,60px) var(--container-padding);
   text-align: center;
 }
 
@@ -161,19 +177,16 @@ a.secondary {
 }
 
 .services {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .service {
-  flex: 1;
-  min-width: 250px;
   padding: 20px;
   background-color: var(--foreground);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 .service h3 {
@@ -221,7 +234,26 @@ a.secondary {
   }
 
   .services {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  .ctas a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: clamp(24px,5vw,48px) var(--container-padding);
+    gap: 18px;
+  }
+
+  .intro h1 {
+    font-size: clamp(30px, 5vw, 36px);
+  }
+
+  .nav {
+    gap: 12px;
   }
 }
 
