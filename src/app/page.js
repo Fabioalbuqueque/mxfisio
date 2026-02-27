@@ -43,8 +43,12 @@ export default function Home() {
               <p>Preparação física e recuperação de atletas.</p>
             </div>
             <div className={styles.service}>
-              <h3>Fisioterapia Respiratória</h3>
+              <h3>fisioterapia dermatofuncional</h3>
               <p>Tratamentos para melhorar a função respiratória.</p>
+            </div>
+            <div className={styles.service}>
+              <h3>fisioterapia osteopatia</h3>
+              <p>Busca identificar e tratar a causa subjacente dos problemas, não apenas os sintomas.</p>
             </div>
           </div>
         </section>
