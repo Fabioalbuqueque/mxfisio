@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <h2>Medicina e Saúde</h2>
+          <h2>Marcela Xavier </h2>
         </div>
         <nav className={styles.nav}>
           <Link href="#servicos">Serviços</Link>
@@ -18,7 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.hero}>
           <div className={styles.intro}>
-            <h1>Bem-vindo à Marcela Fisoterapelta </h1>
+            <h1>Bem-vindo à Marcela Fisioterapeuta </h1>
             <p>Cuide da sua saúde com tratamentos personalizados e eficazes. Recupere sua mobilidade e qualidade de vida.</p>
             <div className={styles.ctas}>
               <Link href="#contato" className="primary">Agende uma Consulta</Link>
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
            
-            <div className={styles.placeholderImage}><Image src="/marcelaaa.png" alt="Imagem de Fisioterapia" width={600} height={400} /></div>
+            <div className={styles.placeholderImage}><Image src="/marcelaaa.png" alt="Imagem de Fisioterapia" width={600} height={500} /></div>
          
           </div>
         </section>
