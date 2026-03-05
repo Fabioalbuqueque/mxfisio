@@ -43,12 +43,15 @@ export default function Home() {
               <p>Preparação física e recuperação de atletas.</p>
             </div>
             <div className={styles.service}>
-              <h3>fisioterapia dermatofuncional</h3>
-              <p>Tratamentos para melhorar a função respiratória.</p>
+              <h3>Fisioterapia Dermatofuncional</h3>
+              <p>Foca no tratamento de flacidez, celulite, gordura localizada, cicatrizes, 
+                além de cuidados pré e pós-operatórios de cirurgias plásticas.
+                </p>
             </div>
             <div className={styles.service}>
-              <h3>fisioterapia osteopatia</h3>
-              <p>Busca identificar e tratar a causa subjacente dos problemas, não apenas os sintomas.</p>
+              <h3>Osteopatia</h3>
+              <p> é um sistema de tratamento terapêutico manual, não invasivo e holístico.
+                 Que foca  na relação entre estrutura (ossos, músculos, fáscias) e função do corpo.</p>
             </div>
           </div>
         </section>
