@@ -304,7 +304,7 @@ a.secondary {
   }
 
   .page {
-    --background: rgba(110, 91, 91, 0.445);
+    --background: rgba(110, 91, 91, 0.767);
     --foreground:rgba(203, 181, 150);
 
     --text-primary: #ededed;

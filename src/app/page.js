@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
            
-            <div className={styles.placeholderImage}><Image src="/marcelaaa.png" alt="Imagem de Fisioterapia" width={600} height={500} /></div>
+            <div className={styles.placeholderImage}><Image src="/xavier.png" alt="Imagem de Fisioterapia" width={600} height={500} /></div>
          
           </div>
         </section>
