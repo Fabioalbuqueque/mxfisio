@@ -19,7 +19,7 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.intro}>
             <h1>Bem-vindo à Marcela Fisioterapeuta </h1>
-            <p>Cuide da sua saúde com tratamentos personalizados e eficazes. Recupere sua mobilidade e qualidade de vida.</p>
+            <p>Cuidar da sua saúde é a minha prioridade com tratamentos personalizados e eficazes. Recupere sua mobilidade e qualidade de vida.</p>
             <div className={styles.ctas}>
               <Link href="#contato" className="primary">Agende uma Consulta</Link>
               <Link href="#servicos" className="secondary">Saiba Mais</Link>
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </section>
         <section id="servicos" className={styles.section}>
-          <h2>Nossos Serviços</h2>
+          <h2>Serviços</h2>
           <div className={styles.services}>
             <div className={styles.service}>
               <h3>Fisioterapia Ortopédica</h3>
